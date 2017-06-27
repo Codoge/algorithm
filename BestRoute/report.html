@@ -1,0 +1,47 @@
+<HTML>
+<HEAD>
+    <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+    <script type='text/javascript'>
+      google.charts.load('current', {packages:['map']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Lat', 'Long', 'Name'], 
+[-31.977537, 115.816509, 'Your location'],
+[-31.976132, 115.816033, 'start stop, depart at 17:02:00 route_id: PAT-CIR-3594'],
+[-31.991743, 115.911401, 'end stop, arrive at 18:40:00 route_id: PAT-CIR-3594'],
+[-31.999566, 115.916588, 'Your destination']
+]);
+
+        var map = new google.visualization.Map(document.getElementById('map_div'));
+        map.draw(data, {
+          showTooltip: true,
+          showInfoWindow: true
+        });
+      }
+
+    </script>
+<style>
+.titulo{font-size: 1em; color: white; background:#0863CE; padding: 0.1em 0.2em;}
+table
+{
+border-collapse:collapse;
+}
+table, td, th
+{
+border:1px solid black;
+}
+html{text-align:center;}
+</style>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+</HEAD>
+<BODY align=center>
+the <strong>Best</strong> trip with shortest time and distance<br>
+Last updated: <strong>2017年 6月 1日 星期四 17时02分20秒 CST</strong><br><br>
+<br><br>
+<p>start location: -31.977537, 115.816509</p>
+<p>First, you should walk 162 m to the start stop (id: 10381)</p>
+<p>Then, wait for the vehicle start your trip (route id: PAT-CIR-3594), which will depart at 17:02:00</p>
+<p>The vehicle will arrive the stop (id: 11690) at 18:40:00, you need get off.</p>
+<p>Finally, you just need walk 998 m to your destination: -31.999566, 115.916588</p>
+<center><div id='map_div' style='width: 800px; height: 600px'></div></center></BODY></HTML>

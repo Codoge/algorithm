@@ -1,0 +1,1 @@
+init_distance=9753
